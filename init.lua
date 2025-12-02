@@ -783,6 +783,9 @@ require('lazy').setup({
     -- change the command in the config to whatever the name of that colorscheme is.
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
+    -- Possible themes:
+    --"loctvl842/monokai-pro.nvim",
+    --
     'ribru17/bamboo.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()
@@ -913,6 +916,11 @@ require('lazy').setup({
     },
   },
 })
+
+-- Transparent backgrounds:
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
